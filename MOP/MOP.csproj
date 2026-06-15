@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CEAE666-CBA5-4FA6-AEE3-D6C5CFB2DE20}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MOPFMWC</RootNamespace>
+    <AssemblyName>MOPFMWC</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <RuntimeIdentifier>win</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Pro|AnyCPU'">
+    <OutputPath>bin\Pro\</OutputPath>
+    <DefineConstants>TRACE;PRO DEBUG</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProRelease|AnyCPU'">
+    <OutputPath>bin\ProRelease\</OutputPath>
+    <DefineConstants>TRACE;PRO</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProRelease|x64'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Pro|x64'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>d:\SteamLibrary\steamapps\common\My Winter Car\mywintercar_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ES2">
+      <HintPath>d:\SteamLibrary\steamapps\common\My Winter Car\mywintercar_Data\Managed\ES2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>d:\SteamLibrary\steamapps\common\My Winter Car\mywintercar_Data\Managed\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCLoader">
+      <HintPath>d:\SteamLibrary\steamapps\common\My Winter Car\mywintercar_Data\Managed\MSCLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>d:\SteamLibrary\steamapps\common\My Winter Car\mywintercar_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayMaker">
+      <HintPath>d:\SteamLibrary\steamapps\common\My Winter Car\mywintercar_Data\Managed\PlayMaker.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>d:\SteamLibrary\steamapps\common\My Winter Car\mywintercar_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>d:\SteamLibrary\steamapps\common\My Winter Car\mywintercar_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\Common\BugReporter.cs" />
+    <Compile Include="src\Common\Enumerations\DisableOn.cs" />
+    <Compile Include="src\Common\Enumerations\GameFixStatus.cs" />
+    <Compile Include="src\Common\Enumerations\PerformanceMode.cs" />
+    <Compile Include="src\Common\Enumerations\SatsumaEnableOn.cs" />
+    <Compile Include="src\Common\Enumerations\ToggleAllMode.cs" />
+    <Compile Include="src\Common\Enumerations\ToggleModes.cs" />
+    <Compile Include="src\Common\Enumerations\VehiclesTypes.cs" />
+    <Compile Include="src\Common\Interfaces\IDisableUnderCondition.cs" />
+    <Compile Include="src\Common\Interfaces\ILod.cs" />
+    <Compile Include="src\Common\Interfaces\IManager.cs" />
+    <Compile Include="src\Common\LoadScreen.cs" />
+    <Compile Include="src\Common\Paths.cs" />
+    <Compile Include="src\Common\SaveSlotsSupport.cs" />
+    <Compile Include="src\Common\ToggledItemsListGenerator.cs" />
+    <Compile Include="src\DebugTools\DebugMonitor.cs" />
+    <Compile Include="src\FSM\Actions\CustomAddItemBehaviour.cs" />
+    <Compile Include="src\FSM\Actions\CustomCreateHose.cs" />
+    <Compile Include="src\FSM\Actions\CustomCreateObject.cs" />
+    <Compile Include="src\FSM\Actions\CustomPackageHandler.cs" />
+    <Compile Include="src\FSM\Actions\CustomSatsumaBumperAttach.cs" />
+    <Compile Include="src\FSM\Actions\CustomSatsumaBumperDetach.cs" />
+    <Compile Include="src\FSM\Actions\CustomStateAction.cs" />
+    <Compile Include="src\FSM\Actions\CustomToggleAllBoltsAction.cs" />
+    <Compile Include="src\FSM\Actions\DelayedItemBehaviour.cs" />
+    <Compile Include="src\FSM\Actions\GrandmaHiker.cs" />
+    <Compile Include="src\FSM\Actions\WindscreenRepairJob.cs" />
+    <Compile Include="src\FSM\FsmExtensions.cs" />
+    <Compile Include="src\GameFixes.cs" />
+    <Compile Include="src\Helpers\MopPauseMenuHandler.cs" />
+    <Compile Include="src\Helpers\MopSaveFileData.cs" />
+    <Compile Include="src\Helpers\SaveBugs.cs" />
+    <Compile Include="src\Helpers\SaveManagerBehaviour.cs" />
+    <Compile Include="src\Items\Cases\GrillTriggerBehaviour.cs" />
+    <Compile Include="src\Items\Cases\RearBumperBehaviour.cs" />
+    <Compile Include="src\Items\Cases\SuitcaseMoneyBehaviour.cs" />
+    <Compile Include="src\Items\Cases\ThrowableJunkBehaviour.cs" />
+    <Compile Include="src\Items\Helpers\CashRegisterBehaviour.cs" />
+    <Compile Include="src\Items\Helpers\FloorJackGrabBehaviour.cs" />
+    <Compile Include="src\Items\Helpers\RadioDisable.cs" />
+    <Compile Include="src\Items\ItemFreezer.cs" />
+    <Compile Include="src\Items\Helpers\WheelRepairJobTrigger.cs" />
+    <Compile Include="src\Managers\ItemsManager.cs" />
+    <Compile Include="src\Items\ItemBehaviour.cs" />
+    <Compile Include="src\Items\Helpers\ShopModItemSpawnCheck.cs" />
+    <Compile Include="src\FSM\Actions\CustomStopAction.cs" />
+    <Compile Include="src\FSM\Actions\CustomSuskiLargeFlip.cs" />
+    <Compile Include="src\Managers\PlaceManager.cs" />
+    <Compile Include="src\Managers\SectorManager.cs" />
+    <Compile Include="src\Helpers\DynamicDrawDistance.cs" />
+    <Compile Include="src\Helpers\ItemAntiClip.cs" />
+    <Compile Include="src\FSM\FsmManager.cs" />
+    <Compile Include="src\Helpers\OnDeathBehaviour.cs" />
+    <Compile Include="src\Helpers\SatsumaInArea.cs" />
+    <Compile Include="src\Helpers\SaveManager.cs" />
+    <Compile Include="src\ModConsole.cs" />
+    <Compile Include="src\Places\Cases\Misc\SausageInMicrowaveBehaviour.cs" />
+    <Compile Include="src\Rules\Configuration\ServerSources.cs" />
+    <Compile Include="src\Rules\Types\ChangeParentRule.cs" />
+    <Compile Include="src\Rules\Types\NoLod.cs" />
+    <Compile Include="src\Rules\Types\Rule.cs" />
+    <Compile Include="src\Vehicles\Cases\Ferndale.cs" />
+    <Compile Include="src\Vehicles\Cases\Flatbed.cs" />
+    <Compile Include="src\Vehicles\Cases\Gifu.cs" />
+    <Compile Include="src\Vehicles\Cases\Jonnez.cs" />
+    <Compile Include="src\Vehicles\Cases\Kekmet.cs" />
+    <Compile Include="src\Vehicles\Cases\Ruscko.cs" />
+    <Compile Include="src\LOD\LodObject.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaExhaustMufflerFix.cs" />
+    <Compile Include="src\WorldObjects\SkidmarkObject.cs" />
+    <Compile Include="src\zModLoad.cs" />
+    <Compile Include="src\Places\Cases\Farm.cs" />
+    <Compile Include="src\Places\Cases\Inspection.cs" />
+    <Compile Include="src\Common\MopData.cs" />
+    <Compile Include="src\Sector.cs" />
+    <Compile Include="src\Places\Cases\Yard.cs" />
+    <Compile Include="src\Vehicles\Cases\Combine.cs" />
+    <Compile Include="src\Vehicles\Cases\Hayosiko.cs" />
+    <Compile Include="src\Vehicles\Managers\BusRollFix.cs" />
+    <Compile Include="src\FSM\Actions\CustomPlayMakerFixedUpdate.cs" />
+    <Compile Include="src\Vehicles\Managers\DelayedHingeManager.cs" />
+    <Compile Include="src\Vehicles\Managers\GifuHandThrottle.cs" />
+    <Compile Include="src\Vehicles\Managers\HandThrottle.cs" />
+    <Compile Include="src\Vehicles\Managers\HingeManager.cs" />
+    <Compile Include="src\Vehicles\Cases\Boat.cs" />
+    <Compile Include="src\FSM\Actions\MasterAudioAssembleCustom.cs" />
+    <Compile Include="src\FSM\Actions\CustomBatteryDisable.cs" />
+    <Compile Include="src\Vehicles\Managers\KekmetHandThrottle.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaCustomHoodUse.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaBoltsAntiReload.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaHingeManager.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaOnActionObjects.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaRadiatorHoseFix.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaSeatsManager.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaPartMassManager.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaTrigger.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaTriggerFixer.cs" />
+    <Compile Include="src\Vehicles\Managers\SatsumaManagers\SatsumaWindscreenFixer.cs" />
+    <Compile Include="src\Vehicles\Managers\TrailerLogUnderFloor.cs" />
+    <Compile Include="src\Vehicles\Cases\Satsuma.cs" />
+    <Compile Include="src\Vehicles\Managers\PreventToggleOnObject.cs" />
+    <Compile Include="src\Managers\VehicleManager.cs" />
+    <Compile Include="src\Places\Cases\RepairShop.cs" />
+    <Compile Include="src\Places\Place.cs" />
+    <Compile Include="src\Places\Cases\Teimo.cs" />
+    <Compile Include="src\Vehicles\Vehicle.cs" />
+    <Compile Include="src\Managers\WorldObjectManager.cs" />
+    <Compile Include="src\Rules\Types\IgnoreRuleAtPlace.cs" />
+    <Compile Include="src\Rules\Types\NewSector.cs" />
+    <Compile Include="src\Rules\Types\SpecialRules.cs" />
+    <Compile Include="src\Common\CompatibilityManager.cs" />
+    <Compile Include="src\Common\ConsoleCommands.cs" />
+    <Compile Include="src\Common\CustomExtensions.cs" />
+    <Compile Include="src\Common\ExceptionManager.cs" />
+    <Compile Include="src\Common\MopSettings.cs" />
+    <Compile Include="src\Rules\Types\IgnoreRule.cs" />
+    <Compile Include="src\Rules\Configuration\ServerContentData.cs" />
+    <Compile Include="src\Rules\RulesManager.cs" />
+    <Compile Include="src\Rules\Configuration\Loader.cs" />
+    <Compile Include="src\Rules\Types\ToggleRule.cs" />
+    <Compile Include="src\Hypervisor.cs" />
+    <Compile Include="src\MOP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\WorldObjects\GenericObject.cs" />
+    <Compile Include="src\WorldObjects\SimpleObjectToggle.cs" />
+    <Compile Include="src\WorldObjects\MultipleRenderersToggle.cs" />
+    <Compile Include="src\WorldObjects\RendererToggle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LogicalName>MOP.Properties.Resources.resources</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changelog.txt" />
+    <None Include="Resources\icon" />
+    <EmbeddedResource Include="Resources\itemcounter_to_transform.csv" />
+    <None Include="Resources\mop.bundle" />
+    <EmbeddedResource Include="Resources\sources.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\donates.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "d:\SteamLibrary\steamapps\common\My Winter Car\Mods" /y</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
